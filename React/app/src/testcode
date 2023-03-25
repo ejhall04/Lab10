@@ -1,0 +1,66 @@
+<img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+        import logo from './logo.svg';
+
+        call set state, bind the parent to the child
+        setState.?
+        state of the child becomes state of the parent
+
+        <div>
+          <button
+            onClick={() => {
+              this.setState({ whichList: "Marvel" });
+            }}
+          >
+            Marvel fan
+          </button>
+          <button
+           onClick={() => {
+              this.setState({ whichList: "DC" });
+            }}
+            >
+              DC fan
+            </button>
+            
+            {this.state.whichList}
+        </div>
+
+        this.state.MarOrDC ? "Marvel"
+        return this.state.myList1.map((item) => { 
+            return <div>{item}</div>
+        }):
+        return this.state.myList2.map((item) => { 
+            return <div>{item}</div>
+        })
+    }
+    }
+
+    return <div>
+      {(() => {
+  if (this.state.MarOrDC == "Marvel") {
+    return (
+      this.state.myList1.map((item) => { 
+          return <div>{item}</div>})
+    )} 
+    else {
+    return (
+      this.state.myList2.map((item) => { 
+          return <div>{item}</div>
+      })
+    )
+  }
+})()}
+  </div>
+  myList1 : ['Iron man', 'Thor', 'Captain America', 'Hulk', 'Hawkeye', 'Black Widow'], 
+        myList2 : ['Superman', 'Batman', 'Wonder Woman', 'Aquaman', 'Green Lantern', 'Flash', 'Cybrog'],
+        <List parentCallbackTwo = {this.handleCallbackTwo}/>
